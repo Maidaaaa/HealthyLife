@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Dark Admin</title>
+    <title>Healthy Life</title>
 
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
@@ -13,14 +13,19 @@
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
+
+
     <!-- you need to include the shieldui css and js assets in order for the charts to work -->
     <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
     <link id="gridcss" rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/dark-bootstrap/all.min.css" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
     <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>
 </head>
 <body>
+
     <div id="wrapper">
           <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
@@ -30,11 +35,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin Panel</a>
-            </div>
+
+                <a class="navbar-brand" href="index.html">HealthyLife</a>
+                <img src="images/logo.png" alt="" width="100" height="75">
+
+          </div>
+
+
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id="active" class="nav navbar-nav side-nav">
-                    <li class="selected"><a href="index.html"><i class="fa fa-bullseye"></i> Dashboard</a></li>
+                    <li class="selected"><a href="index.html"><i class="fa fa-bullseye"></i> HealthyLife</a></li>
                     <li><a href="portfolio.html"><i class="fa fa-tasks"></i> Portfolio</a></li>
                     <li><a href="blog.html"><i class="fa fa-globe"></i> Blog</a></li>
                     <li><a href="signup.html"><i class="fa fa-list-ol"></i> SignUp</a></li>
@@ -45,6 +55,11 @@
                     <li><a href="bootstrap-elements.html"><i class="fa fa-list-ul"></i> Bootstrap Elements</a></li>
                     <li><a href="bootstrap-grid.html"><i class="fa fa-table"></i> Bootstrap Grid</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                     </ul>
+
                 <ul class="nav navbar-nav navbar-right navbar-user">
                     <li class="dropdown messages-dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">2</span> <b class="caret"></b></a>
@@ -86,6 +101,7 @@
                 </ul>
             </div>
         </nav>
+        <div class="container">
 
         <div id="page-wrapper">
             <div class="row">
@@ -93,132 +109,67 @@
                     <h1>Dashboard <small>Statistics and more</small></h1>
                     <div class="alert alert-dismissable alert-warning">
                         <button data-dismiss="alert" class="close" type="button">&times;</button>
-                        Welcome to the admin dashboard! Feel free to review all pages and modify the layout to your needs. 
+                        Welcome to the admin dashboard! Feel free to review all pages and modify the layout to your needs.
                         <br />
-                        This theme uses the <a href="https://www.shieldui.com">ShieldUI</a> JavaScript library for the 
+                        This theme uses the <a href="https://www.shieldui.com">ShieldUI</a> JavaScript library for the
                         additional data visualization and presentation functionality illustrated here.
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Visits Based on a 10 days data</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div id="shieldui-chart1"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-rss"></i> Feed</h3>
-                        </div>
-                        <div class="panel-body feed">
-                            <section class="feed-item">
-                                <div class="icon pull-left">
-                                    <i class="fa fa-comment"></i>
-                                </div>
-                                <div class="feed-item-body">
-                                    <div class="text">
-                                        <a href="#">John Doe</a> commented on <a href="#">What Makes Good Code Good</a>.
-                                    </div>
-                                    <div class="time pull-left">
-                                        3 h
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="feed-item">
-                                <div class="icon pull-left">
-                                    <i class="fa fa-check"></i>
-                                </div>
-                                <div class="feed-item-body">
-                                    <div class="text">
-                                        <a href="#">Merge request #42</a> has been approved by <a href="#">Jessica Lori</a>.
-                                    </div>
-                                    <div class="time pull-left">
-                                        10 h
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="feed-item">
-                                <div class="icon pull-left">
-                                    <i class="fa fa-plus-square-o"></i>
-                                </div>
-                                <div class="feed-item-body">
-                                    <div class="text">
-                                        New user <a href="#">Greg Wilson</a> registered.
-                                    </div>
-                                    <div class="time pull-left">
-                                        Today
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="feed-item">
-                                <div class="icon pull-left">
-                                    <i class="fa fa-bolt"></i>
-                                </div>
-                                <div class="feed-item-body">
-                                    <div class="text">
-                                        Server fail level raises above normal. <a href="#">See logs</a> for details.
-                                    </div>
-                                    <div class="time pull-left">
-                                        Yesterday
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="feed-item">
-                                <div class="icon pull-left">
-                                    <i class="fa fa-archive"></i>
-                                </div>
-                                <div class="feed-item-body">
-                                    <div class="text">
-                                        <a href="#">Database usage report</a> is ready.
-                                    </div>
-                                    <div class="time pull-left">
-                                        Yesterday
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="feed-item">
-                                <div class="icon pull-left">
-                                    <i class="fa fa-shopping-cart"></i>
-                                </div>
-                                <div class="feed-item-body">
-                                    <div class="text">
-                                        <a href="#">Order #233985</a> needs additional processing.
-                                    </div>
-                                    <div class="time pull-left">
-                                        Wednesday
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="feed-item">
-                                <div class="icon pull-left">
-                                    <i class="fa fa-arrow-down"></i>
-                                </div>
-                                <div class="feed-item-body">
-                                    <div class="text">
-                                        <a href="#">Load more...</a>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Traffic Sources One month tracking </h3>
-                        </div>
-                        <div class="panel-body">
-                            <div id="shieldui-grid1"></div>
-                        </div>
-                    </div>
+          <class="container">
+
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img class="w-100" src="picture1.jpg" alt="" width="2000" height="600">
+        <div class="carousel-caption">
+          <h3>AA</h3>
+          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img class="w-100" src="picture2.jpg" alt="" width="2000" height="600">
+        <div class="carousel-caption">
+          <h3>BB</h3>
+          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+        </div>
+      </div>
+
+
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+          </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 ">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Traffic Sources One month tracking </h3>
+              </div>
+
+</div>
+</div>
                 </div>
             </div>
             <div class="row">
@@ -227,9 +178,7 @@
                         <div class="panel-heading">
                             <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Logins per week</h3>
                         </div>
-                        <div class="panel-body">
-                            <div id="shieldui-chart2"></div>
-                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -424,7 +373,7 @@
                                     <div class="news-item-info">
                                         <div class="name"><a href="#">Edin Garey</a></div>
                                         <div class="comment">
-                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur 
+                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur
                                             aut odit aut fugit,sed quia
                                         </div>
                                     </div>
@@ -543,12 +492,14 @@
                 paging: false,
                 columns: [
                 { field: "Source", width: "170px", title: "Source" },
-                { field: "Amount", title: "Amount" },                
+                { field: "Amount", title: "Amount" },
                 { field: "Percent", title: "Percent", format: "{0} %" },
                 { field: "Target", title: "Target" },
                 ]
-            });            
-        });        
+            });
+        });
     </script>
+  </container>
+
 </body>
 </html>
