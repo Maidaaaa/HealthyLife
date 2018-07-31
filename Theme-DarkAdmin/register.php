@@ -42,7 +42,7 @@
                     <li><a href="nutrition.html"></i> Nutrition</a></li>
 
                     <li><a href="signup.html"><i class="fa fa-list-ol"></i> SignUp</a></li>
-                    <li class="selected"><a href="register.html"><i class="fa fa-font"></i> Register</a></li>
+                    <li class="selected"><a href="register.php"><i class="fa fa-font"></i> Register</a></li>
                       </ul>
                 <ul class="nav navbar-nav navbar-right navbar-user">
                     <li class="dropdown messages-dropdown">
